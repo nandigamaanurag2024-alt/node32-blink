@@ -1,13 +1,15 @@
 #include <Arduino.h>
 
+const int ledPin = D2;
+
 void setup() {
-    pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-    digitalWrite(LED_BUILTIN, LOW);   // LED ON (ESP8266 built-in LED)
-    delay(1000);
+  digitalWrite(ledPin, HIGH);
+  delay(500);
 
-    digitalWrite(LED_BUILTIN, HIGH);  // LED OFF
-    delay(1000);
+  digitalWrite(ledPin, LOW);
+  delay(500);
 }
